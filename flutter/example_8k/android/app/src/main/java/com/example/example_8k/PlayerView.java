@@ -29,10 +29,11 @@ public class PlayerView implements PlatformView {
         addCallback();
 
 
-        mainActivity.runOnUiThread(() -> {
-            ViewGroup vg = (ViewGroup) mainActivity.getWindow().getDecorView();
-            vg.addView(integratedSurfaceView);
-        });
+        // The following is the hack to display 8K resolution without the Flutter Engine.
+//        mainActivity.runOnUiThread(() -> {
+//            ViewGroup vg = (ViewGroup) mainActivity.getWindow().getDecorView();
+//            vg.addView(integratedSurfaceView);
+//        });
 
     }
 
